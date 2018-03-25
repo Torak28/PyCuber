@@ -3,6 +3,8 @@
 ### ToDo:
 
 - [x] Wyodrębnić rysowanie, może z tego machnąć klasę
-- [ ] Testy rysowania
-- [ ] Klasa kostki z obrotami
+- [x] Testy rysowania
+- [ ] Klasa kostki z losowym rozmieszczeniem(na jakiś zasadach)
+- [ ] Klasa kostki z przesuwaniem
+- [ ] losowe rozmieszczenie na przesunięciach
 - [ ] Klasa solvera
