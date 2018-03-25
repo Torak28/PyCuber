@@ -1,6 +1,4 @@
-from PIL import Image, ImageDraw
-
-"""size_of_tile = 50"""
+from PIL import Image, ImageDraw, ImageFont
 
 class CubeDraw:
 
@@ -18,16 +16,23 @@ class CubeDraw:
     def __init__(self, size_of_tile):
         self.size_of_tile = size_of_tile
 
-    def draw_init(self, img):
+    def draw_init(self):
         """Przygotowanie plotna - dobranie odpowiednich rozmiarow"""
-        img = Image.new('RGB', (self.size_of_tile * 12, self.size_of_tile * 9), self.grayC)
-        return img
+        self.img = Image.new('RGB', (self.size_of_tile * 12, self.size_of_tile * 9), self.grayC)
+        return self.img
 
     def draw_tile(self, img, coord, color):
         """Wyrysowanie pojedynczej plytki - coord to gorny lewy rog"""
         draw = ImageDraw.Draw(img)
         xy = (coord, (coord[0] + self.size_of_tile, coord[1] + self.size_of_tile))
         draw.rectangle(xy, fill=color, outline=self.blackC)
+        return img
+
+    def draw_sign(self, img):
+        """Podpisanie  rysunku"""
+        draw = ImageDraw.Draw(img)
+        font = ImageFont.truetype("arial.ttf", size=15)
+        draw.text((460, 425), "PyCube by Torak28", font=font)
         return img
 
     def draw_state(self, state):
@@ -58,7 +63,7 @@ class CubeDraw:
 
         all_coord = [white_coord, green_coord, orange_coord, red_coord, blue_coord, yellow_coord]
 
-        self.img = self.draw_init(self.img)
+        self.img = self.draw_init()
         for i in range(len(state)):
             for j in range(len(state[i])):
                 if state[i][j] == 'W':
@@ -74,4 +79,4 @@ class CubeDraw:
                 elif state[i][j] == 'Y':
                     self.draw_tile(self.img, all_coord[i][j], self.yellowC)
 
-        return self.img
+        return self.draw_sign(self.img)
