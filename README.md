@@ -4,7 +4,8 @@
 
 - [x] Wyodrębnić rysowanie, może z tego machnąć klasę
 - [x] Testy rysowania
-- [ ] Klasa kostki z losowym rozmieszczeniem(na jakiś zasadach)
-- [ ] Klasa kostki z przesuwaniem
+- [x] Klasa kostki
+- [ ] Przesuniecia
+- [ ] Funkcja formuła
 - [ ] losowe rozmieszczenie na przesunięciach
 - [ ] Klasa solvera
