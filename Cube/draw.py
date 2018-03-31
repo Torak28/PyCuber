@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 
-class CubeDraw:
 
+class CubeDraw:
     greenC = (127, 255, 0)
     whiteC = (255, 255, 255)
     blueC = (0, 0, 255)
