@@ -13,7 +13,9 @@ class CubeDraw:
 
     img = None
 
-    def __init__(self, size_of_tile):
+    def __init__(self, size_of_tile=None):
+        if size_of_tile is None:
+            size_of_tile = 50
         self.size_of_tile = size_of_tile
 
     def draw_init(self):
