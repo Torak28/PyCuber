@@ -57,6 +57,22 @@ class Cube:
         self.state[4] = old_state[[i for i in range(len(old_state)) if old_state[i][4] == self.u][0]]
         self.state[5] = old_state[[i for i in range(len(old_state)) if old_state[i][4] == self.b][0]]
 
+    def rotate_x_prime(self):
+        """rotacja X'"""
+        old_state = copy.deepcopy(self.state)
+        self.f = old_state[2][4]
+        self.b = old_state[3][4]
+        self.l = old_state[5][4]
+        self.r = old_state[0][4]
+        self.u = old_state[4][4]
+        self.d = old_state[1][4]
+        self.state[0] = old_state[[i for i in range(len(old_state)) if old_state[i][4] == self.f][0]]
+        self.state[1] = old_state[[i for i in range(len(old_state)) if old_state[i][4] == self.d][0]]
+        self.state[2] = old_state[[i for i in range(len(old_state)) if old_state[i][4] == self.l][0]]
+        self.state[3] = old_state[[i for i in range(len(old_state)) if old_state[i][4] == self.r][0]]
+        self.state[4] = old_state[[i for i in range(len(old_state)) if old_state[i][4] == self.u][0]]
+        self.state[5] = old_state[[i for i in range(len(old_state)) if old_state[i][4] == self.b][0]]
+
     def rotate_y(self):
         """rotacja X"""
         old_state = copy.deepcopy(self.state)
@@ -66,6 +82,22 @@ class Cube:
         self.r = old_state[3][4]
         self.u = old_state[0][4]
         self.d = old_state[5][4]
+        self.state[0] = old_state[[i for i in range(len(old_state)) if old_state[i][4] == self.f][0]]
+        self.state[1] = old_state[[i for i in range(len(old_state)) if old_state[i][4] == self.d][0]]
+        self.state[2] = old_state[[i for i in range(len(old_state)) if old_state[i][4] == self.l][0]]
+        self.state[3] = old_state[[i for i in range(len(old_state)) if old_state[i][4] == self.r][0]]
+        self.state[4] = old_state[[i for i in range(len(old_state)) if old_state[i][4] == self.u][0]]
+        self.state[5] = old_state[[i for i in range(len(old_state)) if old_state[i][4] == self.b][0]]
+
+    def rotate_y_prime(self):
+        """rotacja X"""
+        old_state = copy.deepcopy(self.state)
+        self.f = old_state[4][4]
+        self.b = old_state[1][4]
+        self.l = old_state[2][4]
+        self.r = old_state[3][4]
+        self.u = old_state[5][4]
+        self.d = old_state[0][4]
         self.state[0] = old_state[[i for i in range(len(old_state)) if old_state[i][4] == self.f][0]]
         self.state[1] = old_state[[i for i in range(len(old_state)) if old_state[i][4] == self.d][0]]
         self.state[2] = old_state[[i for i in range(len(old_state)) if old_state[i][4] == self.l][0]]
