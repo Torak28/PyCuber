@@ -2,14 +2,15 @@ import unittest
 from Cube import CubeDraw
 from PIL import Image, ImageStat
 
+
 class TestCubeDraw(unittest.TestCase):
     def setUp(self):
-        self.Tstate  = [['W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W'],
-                        ['G', 'G', 'G', 'G', 'G', 'G', 'G', 'G', 'G'],
-                        ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
-                        ['R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R'],
-                        ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
-                        ['Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y']]
+        self.Tstate = [['W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W'],
+                       ['G', 'G', 'G', 'G', 'G', 'G', 'G', 'G', 'G'],
+                       ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
+                       ['R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R'],
+                       ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
+                       ['Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y']]
         self.Tsize_of_tile = 50
         self.Timg = CubeDraw(self.Tsize_of_tile)
         self.TgreenC = (127, 255, 0)
